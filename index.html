@@ -450,8 +450,22 @@
                                 <path d="M35.453 9.373C29.455 3.371 21.32 0 12.839 0H.116C.113 0 .127 0 .16 0v100h76.956V64.314a32.01 32.01 0 0 0-9.368-22.627L35.453 9.373z"></path>
                               </svg>
                             <div class="card__inner">
-
-                                <div class="status" style="color:#89EB5B">Tba</div>
+                                <script>
+                                    function copyToClipboard(text) {
+                                        navigator.clipboard.writeText(text).then(function() {
+                                            alert("Text copied to clipboard: " + text);
+                                        }, function(err) {
+                                            console.error("Could not copy text: ", err);
+                                        });
+                                    }
+                                </script>
+                                <style>
+                                    .status {
+            color: #89EB5B;
+            cursor: pointer;
+        }
+                                </style>
+                                <div class="status" onclick="copyToClipboard('Tba')" style="color:#89EB5B">Tba</div>
                                 <div class="solutions__title head h3">CONTRACT ADDRESS</div>
 
                                 <!-- <div class="solutions__content">Sell Luffy on 0% tax - Giving all crypto investors the best experience!!</div> -->
